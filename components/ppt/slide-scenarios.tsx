@@ -61,7 +61,7 @@ export function SlideScenarios() {
       <div className="relative px-6 md:px-10 pt-4 pb-1">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
-          <span className="text-sm font-medium text-[var(--text-tertiary)]">05 / 07</span>
+          <span className="text-sm font-medium text-[var(--text-tertiary)]">05 / 08</span>
         </div>
         <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
           三种最常见的工作场景
@@ -69,57 +69,57 @@ export function SlideScenarios() {
       </div>
 
       {/* 主内容 */}
-      <div className="relative flex-1 px-6 md:px-10 py-1 overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
+      <div className="relative flex-1 px-6 md:px-10 py-3 overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-full">
           {scenarios.map((scenario) => (
             <div
               key={scenario.number}
-              className={`relative rounded-2xl bg-gradient-to-br ${scenario.bgGradient} border border-[var(--border-secondary)] overflow-hidden transition-all duration-[var(--transition-base)] hover:shadow-xl ${scenario.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
+              className={`relative rounded-2xl bg-gradient-to-br ${scenario.bgGradient} border border-[var(--border-secondary)] overflow-hidden transition-all duration-[var(--transition-base)] hover:shadow-xl flex flex-col ${scenario.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
             >
               {/* 头部标识 */}
-              <div className={`p-3 bg-gradient-to-r ${scenario.color}`}>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                    <scenario.icon className="w-4 h-4 text-white" />
+              <div className={`px-4 py-3 bg-gradient-to-r ${scenario.color}`}>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <scenario.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-white/70 font-medium">场景{scenario.number}</span>
-                    <h3 className="font-bold text-white text-xs leading-tight">{scenario.title}</h3>
+                    <span className="text-xs text-white/70 font-medium">场景{scenario.number}</span>
+                    <h3 className="font-bold text-white text-sm leading-tight">{scenario.title}</h3>
                   </div>
                 </div>
               </div>
 
               {/* 内容区 */}
-              <div className="p-3 space-y-2.5">
+              <div className="p-4 space-y-3 flex-1 flex flex-col justify-between">
                 {/* 你手里有什么 */}
                 <div>
-                  <div className="flex items-center gap-1.5 mb-1">
-                    <Package className="w-3 h-3 text-[var(--text-tertiary)]" />
-                    <span className="text-[10px] font-semibold text-[var(--text-tertiary)] uppercase tracking-wide">你手里有什么</span>
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <Package className="w-3.5 h-3.5 text-[var(--text-tertiary)]" />
+                    <span className="text-xs font-semibold text-[var(--text-tertiary)] uppercase tracking-wide">你手里有什么</span>
                   </div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{scenario.have}</p>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{scenario.have}</p>
                 </div>
 
                 {/* 地图帮怎么做 */}
                 <div>
-                  <div className="flex items-center gap-1.5 mb-1">
-                    <ArrowRight className="w-3 h-3 text-[var(--banana-yellow-dark)]" />
-                    <span className="text-[10px] font-semibold text-[var(--banana-yellow-dark)] uppercase tracking-wide">地图帮怎么做</span>
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <ArrowRight className="w-3.5 h-3.5 text-[var(--banana-yellow-dark)]" />
+                    <span className="text-xs font-semibold text-[var(--banana-yellow-dark)] uppercase tracking-wide">地图帮怎么做</span>
                   </div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{scenario.process}</p>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{scenario.process}</p>
                 </div>
 
                 {/* 你最后拿到什么 */}
                 <div>
-                  <div className="flex items-center gap-1.5 mb-1">
-                    <CheckCircle className="w-3 h-3 text-[var(--success)]" />
-                    <span className="text-[10px] font-semibold text-[var(--success)] uppercase tracking-wide">你最后拿到什么</span>
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <CheckCircle className="w-3.5 h-3.5 text-[var(--success)]" />
+                    <span className="text-xs font-semibold text-[var(--success)] uppercase tracking-wide">你最后拿到什么</span>
                   </div>
-                  <div className="space-y-1">
+                  <div className="space-y-1.5">
                     {scenario.results.map((result, index) => (
-                      <div key={index} className="flex items-start gap-1.5">
-                        <div className="w-1 h-1 rounded-full bg-[var(--success)] mt-1.5 shrink-0" />
-                        <span className="text-xs text-[var(--text-primary)]">{result}</span>
+                      <div key={index} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[var(--success)] mt-1.5 shrink-0" />
+                        <span className="text-sm text-[var(--text-primary)]">{result}</span>
                       </div>
                     ))}
                   </div>

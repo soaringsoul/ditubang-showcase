@@ -79,7 +79,7 @@ export function SlideCover() {
       <div className="relative py-6 flex items-center justify-center">
         <div className="flex items-center gap-2">
           <div className="w-8 h-1 rounded-full bg-[var(--banana-yellow)]" />
-          <span className="text-xs font-medium text-[var(--text-tertiary)]">01 / 07</span>
+          <span className="text-xs font-medium text-[var(--text-tertiary)]">01 / 08</span>
         </div>
       </div>
 

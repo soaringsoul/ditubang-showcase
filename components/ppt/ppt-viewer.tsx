@@ -9,6 +9,7 @@ import { SlideFeatures } from "./slide-features"
 import { SlideScenarios } from "./slide-scenarios"
 import { SlideCTA } from "./slide-cta"
 import { SlideStart } from "./slide-start"
+import { SlideContact } from "./slide-contact"
 
 const slides = [
   { id: 1, title: "封面", component: SlideCover },
@@ -18,6 +19,7 @@ const slides = [
   { id: 5, title: "工作场景", component: SlideScenarios },
   { id: 6, title: "适合谁用", component: SlideCTA },
   { id: 7, title: "开始使用", component: SlideStart },
+  { id: 8, title: "联系我们", component: SlideContact },
 ]
 
 export function PPTViewer() {

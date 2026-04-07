@@ -74,7 +74,7 @@ export function SlideFeatures() {
       <div className="relative px-6 md:px-10 pt-4 pb-1">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
-          <span className="text-sm font-medium text-[var(--text-tertiary)]">04 / 07</span>
+          <span className="text-sm font-medium text-[var(--text-tertiary)]">04 / 08</span>
         </div>
         <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
           你可以用地图帮完成的 6 类任务
@@ -82,33 +82,33 @@ export function SlideFeatures() {
       </div>
 
       {/* 主内容 */}
-      <div className="relative flex-1 px-6 md:px-10 py-1 overflow-hidden">
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="relative flex-1 px-6 md:px-10 py-3 overflow-hidden">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 h-full">
           {features.map((feature) => (
             <div
               key={feature.number}
-              className={`group relative rounded-xl ${feature.bgColor} border border-[var(--border-secondary)] p-3 transition-all duration-[var(--transition-base)] hover:shadow-lg hover:-translate-y-0.5 ${feature.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
+              className={`group relative rounded-xl ${feature.bgColor} border border-[var(--border-secondary)] p-4 transition-all duration-[var(--transition-base)] hover:shadow-lg hover:-translate-y-0.5 flex flex-col ${feature.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
             >
               {feature.badge && (
-                <div className="absolute -top-2 left-4 px-2 py-0.5 rounded-full bg-[var(--success)] text-xs font-semibold text-white flex items-center gap-1">
+                <div className="absolute -top-2.5 left-4 px-2.5 py-0.5 rounded-full bg-[var(--success)] text-xs font-semibold text-white flex items-center gap-1">
                   <Star className="w-3 h-3" />
                   {feature.badge}
                 </div>
               )}
-              <div className="flex items-start gap-2 mb-2">
-                <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-md shrink-0`}>
-                  <feature.icon className="w-4 h-4 text-white" />
+              <div className="flex items-start gap-3 mb-3">
+                <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-md shrink-0`}>
+                  <feature.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[var(--text-primary)] text-sm">{feature.number}. {feature.title}</h3>
-                  <p className="text-[10px] text-[var(--text-tertiary)] mt-0.5">适合"{feature.stage}"的阶段</p>
+                  <h3 className="font-bold text-[var(--text-primary)] text-base">{feature.number}. {feature.title}</h3>
+                  <p className="text-xs text-[var(--text-tertiary)] mt-0.5">适合"{feature.stage}"的阶段</p>
                 </div>
               </div>
-              <div className="space-y-1">
+              <div className="space-y-1.5 flex-1">
                 {feature.items.map((item, index) => (
-                  <div key={index} className="flex items-center gap-1.5">
-                    <div className="w-1 h-1 rounded-full bg-[var(--text-tertiary)]" />
-                    <span className="text-xs text-[var(--text-secondary)]">{item}</span>
+                  <div key={index} className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[var(--text-tertiary)]" />
+                    <span className="text-sm text-[var(--text-secondary)]">{item}</span>
                   </div>
                 ))}
               </div>

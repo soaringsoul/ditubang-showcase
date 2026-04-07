@@ -47,21 +47,21 @@ export function SlideEntry() {
       <div className="relative px-6 md:px-10 pt-5 pb-2">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
-          <span className="text-sm font-medium text-[var(--text-tertiary)]">02 / 07</span>
+          <span className="text-sm font-medium text-[var(--text-tertiary)]">02 / 08</span>
         </div>
         <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
           先找到入口：桌面端怎么下，在线平台怎么进
         </h2>
-        <p className="mt-1 text-sm text-[var(--text-secondary)]">第一次接触地图帮，先记住这 3 个入口</p>
+        <p className="mt-1 text-sm text-[var(--text-secondary)]">记不住地址也没关系，浏览器搜索「地图帮官网」即可找回所有入口</p>
       </div>
 
       {/* 主内容 */}
-      <div className="relative flex-1 px-6 md:px-10 py-2 overflow-hidden">
+      <div className="relative flex-1 px-6 md:px-10 py-4 flex flex-col justify-between overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {entries.map((entry) => (
             <div
               key={entry.number}
-              className={`group relative rounded-2xl border ${entry.borderColor} ${entry.bgColor} p-4 transition-all duration-[var(--transition-base)] hover:shadow-lg hover:-translate-y-1 ${entry.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
+              className={`group relative rounded-2xl border ${entry.borderColor} ${entry.bgColor} p-5 transition-all duration-[var(--transition-base)] hover:shadow-lg hover:-translate-y-1 ${entry.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
             >
               {entry.highlight && (
                 <div className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full bg-gradient-to-r from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)] text-xs font-semibold text-[var(--black)]">
@@ -72,27 +72,27 @@ export function SlideEntry() {
                 <entry.icon className="w-5 h-5 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">{entry.title}</h3>
-              <code className="inline-block px-2 py-1 rounded-md bg-[var(--bg-primary)] text-sm font-mono text-[var(--text-secondary)] mb-3 border border-[var(--border-secondary)]">
+              <a href={`https://${entry.url}`} target="_blank" rel="noopener noreferrer" className="inline-block px-2 py-1 rounded-md bg-[var(--bg-primary)] text-sm font-mono text-[var(--text-secondary)] mb-3 border border-[var(--border-secondary)] hover:text-[var(--banana-yellow-dark)] hover:border-[var(--banana-yellow)] transition-colors cursor-pointer">
                 {entry.url}
-              </code>
+              </a>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{entry.description}</p>
             </div>
           ))}
         </div>
 
         {/* 判断原则 */}
-        <div className="mt-4 p-4 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-primary)]">
-          <div className="flex items-center gap-2 mb-3">
-            <Lightbulb className="w-4 h-4 text-[var(--banana-yellow-dark)]" />
-            <h3 className="font-bold text-sm text-[var(--text-primary)]">不知道先用哪个，就按这个原则判断</h3>
+        <div className="p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-primary)]">
+          <div className="flex items-center gap-2 mb-4">
+            <Lightbulb className="w-5 h-5 text-[var(--banana-yellow-dark)]" />
+            <h3 className="font-bold text-base text-[var(--text-primary)]">不知道先用哪个，就按这个原则判断</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="space-y-3">
             {[
               { action: "要处理数据、出图、分析", result: "桌面端" },
               { action: "要在线查看、共享成果、团队协作", result: "在线平台" },
               { action: "最常见的使用方式", result: "先桌面端做好，再在线平台分享" },
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm">
+              <div key={index} className="flex items-center gap-3 text-sm">
                 <span className="text-[var(--text-secondary)]">{item.action}</span>
                 <ArrowRight className="w-4 h-4 text-[var(--banana-yellow-dark)] shrink-0" />
                 <span className="font-semibold text-[var(--text-primary)]">{item.result}</span>
@@ -102,10 +102,10 @@ export function SlideEntry() {
         </div>
 
         {/* 提示 */}
-        <div className="mt-3 p-3 rounded-xl bg-gradient-to-r from-[var(--banana-yellow-pale)] to-transparent border-l-4 border-[var(--banana-yellow)]">
-          <p className="text-xs text-[var(--text-secondary)]">
-            <strong className="text-[var(--text-primary)]">温馨提示：</strong>
-            建议先明确核心需求，再选择对应入口开始使用。
+        <div className="p-4 rounded-xl bg-gradient-to-r from-[var(--banana-yellow-pale)] to-transparent border-l-4 border-[var(--banana-yellow)]">
+          <p className="text-sm text-[var(--text-secondary)]">
+            <strong className="text-[var(--text-primary)]">找不到入口？</strong>
+            在浏览器搜索「<strong>地图帮官网</strong>」，从官网首页可以找到桌面端下载页和在线平台的所有入口。
           </p>
         </div>
       </div>

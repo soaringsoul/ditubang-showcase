@@ -31,7 +31,7 @@ export function SlideCTA() {
       <div className="relative px-6 md:px-10 pt-5 pb-2">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
-          <span className="text-sm font-medium text-[var(--text-tertiary)]">06 / 07</span>
+          <span className="text-sm font-medium text-[var(--text-tertiary)]">06 / 08</span>
         </div>
         <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
           适合谁先用？
@@ -39,56 +39,56 @@ export function SlideCTA() {
       </div>
 
       {/* 主内容 */}
-      <div className="relative flex-1 px-6 md:px-10 py-2 overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div className="relative flex-1 px-6 md:px-10 py-4 flex flex-col justify-center overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* 左侧：适合谁 */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             {/* 核心描述 */}
-            <div className="p-4 rounded-2xl bg-gradient-to-br from-[var(--banana-yellow-pale)] to-[var(--bg-secondary)] border border-[var(--banana-yellow)]/30">
-              <h3 className="font-bold text-sm text-[var(--text-primary)] mb-2">
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-[var(--banana-yellow-pale)] to-[var(--bg-secondary)] border border-[var(--banana-yellow)]/30">
+              <h3 className="font-bold text-base text-[var(--text-primary)] mb-2">
                 如果您的工作经常涉及位置、区域、门店或地址数据，地图帮将是理想的工具选择
               </h3>
-              <p className="text-xs text-[var(--text-tertiary)]">典型应用团队：</p>
+              <p className="text-sm text-[var(--text-tertiary)]">典型应用团队：</p>
             </div>
 
             {/* 团队列表 - 2列 */}
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-3">
               {teams.map((team, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 p-2.5 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-secondary)] transition-all duration-[var(--transition-fast)] hover:border-[var(--banana-yellow)]/50"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-secondary)] transition-all duration-[var(--transition-fast)] hover:border-[var(--banana-yellow)]/50"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-primary)] flex items-center justify-center shrink-0">
-                    <team.icon className="w-3.5 h-3.5 text-[var(--text-secondary)]" />
+                  <div className="w-8 h-8 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-primary)] flex items-center justify-center shrink-0">
+                    <team.icon className="w-4 h-4 text-[var(--text-secondary)]" />
                   </div>
-                  <span className="text-xs text-[var(--text-secondary)]">{team.text}</span>
+                  <span className="text-sm text-[var(--text-secondary)]">{team.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* 右侧：为什么选地图帮 */}
-          <div className="space-y-3">
-            <div className="p-4 rounded-2xl bg-[var(--black)] text-white">
-              <div className="flex items-center gap-2 mb-3">
-                <Target className="w-5 h-5 text-[var(--banana-yellow)]" />
-                <h3 className="font-bold text-sm">为什么选地图帮？</h3>
+          <div className="flex flex-col gap-4">
+            <div className="p-5 rounded-2xl bg-[var(--black)] text-white flex-1">
+              <div className="flex items-center gap-2 mb-4">
+                <Target className="w-6 h-6 text-[var(--banana-yellow)]" />
+                <h3 className="font-bold text-base">为什么选地图帮？</h3>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {strengths.map((item, index) => (
-                  <div key={index} className="flex items-start gap-2 p-2.5 rounded-lg bg-white/10">
-                    <div className="w-5 h-5 rounded-full bg-[var(--banana-yellow)]/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-[10px] font-bold text-[var(--banana-yellow)]">{index + 1}</span>
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-white/10">
+                    <div className="w-6 h-6 rounded-full bg-[var(--banana-yellow)]/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="text-xs font-bold text-[var(--banana-yellow)]">{index + 1}</span>
                     </div>
-                    <span className="text-xs text-white/90">{item}</span>
+                    <span className="text-sm text-white/90 leading-relaxed">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* 核心理念 */}
-            <div className="p-4 rounded-2xl bg-gradient-to-br from-[var(--banana-yellow-pale)] to-[var(--bg-tertiary)] border border-[var(--border-primary)]">
-              <p className="text-sm text-[var(--text-primary)] leading-relaxed text-center font-medium">
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-[var(--banana-yellow-pale)] to-[var(--bg-tertiary)] border border-[var(--border-primary)]">
+              <p className="text-base text-[var(--text-primary)] leading-relaxed text-center font-medium">
                 <strong className="text-[var(--banana-yellow-dark)]">地图帮</strong>，让地理数据从「散装素材」变成「可用成果」
               </p>
             </div>
