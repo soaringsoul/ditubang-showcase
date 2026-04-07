@@ -76,7 +76,7 @@ export function SlideFeatures() {
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
           <span className="text-sm font-medium text-[var(--text-tertiary)]">04 / 08</span>
         </div>
-        <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
+        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--text-primary)] to-[var(--banana-yellow-dark)] bg-clip-text text-transparent">
           你可以用地图帮完成的 6 类任务
         </h2>
       </div>
@@ -87,7 +87,7 @@ export function SlideFeatures() {
           {features.map((feature) => (
             <div
               key={feature.number}
-              className={`group relative rounded-xl ${feature.bgColor} border border-[var(--border-secondary)] p-4 transition-all duration-[var(--transition-base)] hover:shadow-lg hover:-translate-y-0.5 flex flex-col ${feature.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
+              className={`group relative rounded-xl ${feature.bgColor} border border-[var(--border-secondary)] p-4 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 flex flex-col ${feature.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50 shadow-[0_4px_12px_rgba(255,215,0,0.3)]' : ''}`}
             >
               {feature.badge && (
                 <div className="absolute -top-2.5 left-4 px-2.5 py-0.5 rounded-full bg-[var(--success)] text-xs font-semibold text-white flex items-center gap-1">

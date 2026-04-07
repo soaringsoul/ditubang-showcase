@@ -63,7 +63,7 @@ export function SlideScenarios() {
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
           <span className="text-sm font-medium text-[var(--text-tertiary)]">05 / 08</span>
         </div>
-        <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
+        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--text-primary)] to-[var(--banana-yellow-dark)] bg-clip-text text-transparent">
           三种最常见的工作场景
         </h2>
       </div>
@@ -74,7 +74,7 @@ export function SlideScenarios() {
           {scenarios.map((scenario) => (
             <div
               key={scenario.number}
-              className={`relative rounded-2xl bg-gradient-to-br ${scenario.bgGradient} border border-[var(--border-secondary)] overflow-hidden transition-all duration-[var(--transition-base)] hover:shadow-xl flex flex-col ${scenario.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
+              className={`relative rounded-2xl bg-gradient-to-br ${scenario.bgGradient} border border-[var(--border-secondary)] overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 flex flex-col ${scenario.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50 shadow-[0_4px_12px_rgba(255,215,0,0.3)]' : ''}`}
             >
               {/* 头部标识 */}
               <div className={`px-4 py-3 bg-gradient-to-r ${scenario.color}`}>

@@ -184,6 +184,22 @@
   }
 }
 
+/* 品牌滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--banana-yellow);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--banana-yellow-dark);
+}
+
 /* 打印视图容器 - 屏幕上隐藏 */
 .print-container {
   display: none;
@@ -333,5 +349,17 @@
   .print-slide .bg-pink-50 {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+  }
+
+  /* 渐变文字打印降级为纯色 */
+  .print-slide [class*="bg-clip-text"] {
+    -webkit-text-fill-color: #1A1A1A !important;
+    color: #1A1A1A !important;
+  }
+
+  /* 金色阴影打印降级为金色边框 */
+  .print-slide [class*="shadow-\\[0_4px_12px"] {
+    outline: 2px solid #FFD700;
+    outline-offset: -2px;
   }
 }

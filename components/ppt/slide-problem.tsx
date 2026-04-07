@@ -32,7 +32,7 @@ export function SlideProblem() {
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
           <span className="text-sm font-medium text-[var(--text-tertiary)]">03 / 08</span>
         </div>
-        <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
+        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--text-primary)] to-[var(--banana-yellow-dark)] bg-clip-text text-transparent">
           地图帮桌面端，到底帮你省掉了哪些折腾
         </h2>
       </div>
@@ -81,21 +81,21 @@ export function SlideProblem() {
           </div>
 
           {/* 右侧：解决方案 */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 h-full">
             {/* 解决方案概述 */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-[var(--banana-yellow-pale)] to-[var(--bg-secondary)] border border-[var(--banana-yellow)]/30">
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-[var(--banana-yellow-pale)] to-[var(--bg-secondary)] border border-[var(--banana-yellow)]/30 flex-1 flex flex-col">
               <div className="flex items-center gap-2 mb-3">
                 <CheckCircle2 className="w-6 h-6 text-[var(--success)]" />
                 <h3 className="font-bold text-base text-[var(--text-primary)]">地图帮想解决的就是这类问题</h3>
               </div>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
                 不是单点小工具，而是一套本地工作台，把下面这些事放进同一条链路：
               </p>
-              <div className="mt-3 grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2 auto-rows-fr">
                 {["查地理数据", "处理表格和位置数据", "做地图和图表", "做空间分析", "覆盖、分单、选址、可达性等业务判断"].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-secondary)]"
+                    className={`flex items-center gap-2 px-3 py-2 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-secondary)] ${index === 4 ? 'col-span-2' : ''}`}
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-[var(--banana-yellow)]" />
                     <span className="text-sm text-[var(--text-primary)]">{item}</span>
@@ -105,18 +105,24 @@ export function SlideProblem() {
             </div>
 
             {/* 核心价值 */}
-            <div className="p-5 rounded-2xl bg-[var(--black)] text-white flex-1 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <Target className="w-6 h-6 text-[var(--banana-yellow)]" />
-                  <h3 className="font-bold text-base">说到底，它不是只想帮你"画一张图"</h3>
-                </div>
-                <p className="text-sm text-white/70 leading-relaxed mb-4">
-                  它更想帮你完成的是：
-                </p>
+            <div className="p-5 rounded-2xl bg-[var(--banana-yellow-pale)] border border-[var(--banana-yellow)]/30 border-l-4 border-l-[var(--banana-yellow)] flex-1 flex flex-col">
+              <div className="flex items-center gap-2 mb-3">
+                <Target className="w-6 h-6 text-[var(--banana-yellow-dark)]" />
+                <h3 className="font-bold text-base text-[var(--text-primary)]">说到底，它不是只想帮你“画一张图”</h3>
               </div>
-              <div className="p-4 rounded-xl bg-white/10 border border-white/20">
-                <p className="font-semibold text-[var(--banana-yellow)] text-center text-base leading-relaxed">
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                它更想帮你完成的是：
+              </p>
+              <div className="space-y-2.5 mb-4">
+                {["把散落在各处的数据汇聚到同一张地图上", "把“看不出规律”的表格变成可视化判断", "把重复的手工操作变成可复用的流程"].map((item, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[var(--banana-yellow-dark)] mt-0.5 shrink-0" />
+                    <span className="text-sm text-[var(--text-secondary)] leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-auto pt-3 border-t border-[var(--banana-yellow)]/20">
+                <p className="font-bold text-[var(--text-primary)] text-lg leading-snug">
                   从一堆零散数据，走到一个可以汇报、可以判断、可以继续复用的结果
                 </p>
               </div>

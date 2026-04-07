@@ -33,7 +33,7 @@ export function SlideCTA() {
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
           <span className="text-sm font-medium text-[var(--text-tertiary)]">06 / 08</span>
         </div>
-        <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
+        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--text-primary)] to-[var(--banana-yellow-dark)] bg-clip-text text-transparent">
           适合谁先用？
         </h2>
       </div>
@@ -56,7 +56,7 @@ export function SlideCTA() {
               {teams.map((team, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-secondary)] transition-all duration-[var(--transition-fast)] hover:border-[var(--banana-yellow)]/50"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-secondary)] transition-all duration-200 hover:border-[var(--banana-yellow)]/50 hover:-translate-y-0.5 hover:shadow-sm"
                 >
                   <div className="w-8 h-8 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-primary)] flex items-center justify-center shrink-0">
                     <team.icon className="w-4 h-4 text-[var(--text-secondary)]" />
@@ -69,18 +69,18 @@ export function SlideCTA() {
 
           {/* 右侧：为什么选地图帮 */}
           <div className="flex flex-col gap-4">
-            <div className="p-5 rounded-2xl bg-[var(--black)] text-white flex-1">
+            <div className="p-5 rounded-2xl bg-[var(--banana-yellow-pale)] border border-[var(--banana-yellow)]/30 border-l-4 border-l-[var(--banana-yellow)] flex-1">
               <div className="flex items-center gap-2 mb-4">
-                <Target className="w-6 h-6 text-[var(--banana-yellow)]" />
-                <h3 className="font-bold text-base">为什么选地图帮？</h3>
+                <Target className="w-6 h-6 text-[var(--banana-yellow-dark)]" />
+                <h3 className="font-bold text-base text-[var(--text-primary)]">为什么选地图帮？</h3>
               </div>
               <div className="space-y-3">
                 {strengths.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-white/10">
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-[var(--bg-primary)] border border-[var(--banana-yellow)]/20">
                     <div className="w-6 h-6 rounded-full bg-[var(--banana-yellow)]/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-xs font-bold text-[var(--banana-yellow)]">{index + 1}</span>
+                      <span className="text-xs font-bold text-[var(--banana-yellow-dark)]">{index + 1}</span>
                     </div>
-                    <span className="text-sm text-white/90 leading-relaxed">{item}</span>
+                    <span className="text-sm text-[var(--text-secondary)] leading-relaxed">{item}</span>
                   </div>
                 ))}
               </div>

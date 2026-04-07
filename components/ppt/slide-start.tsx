@@ -36,7 +36,7 @@ export function SlideStart() {
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
           <span className="text-sm font-medium text-[var(--text-tertiary)]">07 / 08</span>
         </div>
-        <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
+        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--text-primary)] to-[var(--banana-yellow-dark)] bg-clip-text text-transparent">
           怎么开始？记住这四个地址
         </h2>
       </div>
@@ -46,8 +46,8 @@ export function SlideStart() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* 左侧：入口卡片 */}
           <div>
-            <div className="p-6 rounded-2xl bg-[var(--black)] text-white h-full flex flex-col">
-              <h3 className="font-bold text-lg mb-5">第一次接触地图帮，建议这样开始</h3>
+            <div className="p-6 rounded-2xl bg-[var(--banana-yellow-pale)] border border-[var(--banana-yellow)]/30 border-l-4 border-l-[var(--banana-yellow)] h-full flex flex-col">
+              <h3 className="font-bold text-lg mb-5 text-[var(--text-primary)]">第一次接触地图帮，建议这样开始</h3>
               <div className="space-y-3 flex-1">
                 {entries.map((entry, index) => (
                   <a
@@ -55,21 +55,21 @@ export function SlideStart() {
                     href={`https://${entry.url}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-4 p-4 rounded-xl transition-all duration-[var(--transition-fast)] no-underline ${entry.primary ? 'bg-gradient-to-r from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)] text-[var(--black)]' : 'bg-white/10 hover:bg-white/15'}`}
+                    className={`flex items-center gap-4 p-4 rounded-xl transition-all duration-200 no-underline ${entry.primary ? 'bg-gradient-to-r from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)] shadow-[0_4px_12px_rgba(255,215,0,0.3)]' : 'bg-[var(--bg-primary)] border border-[var(--banana-yellow)]/20 hover:border-[var(--banana-yellow)]/40'}`}
                   >
-                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${entry.primary ? 'bg-[var(--black)]/20' : 'bg-white/10'}`}>
-                      <entry.icon className={`w-5 h-5 ${entry.primary ? 'text-[var(--black)]' : 'text-white'}`} />
+                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${entry.primary ? 'bg-[var(--black)]/15' : 'bg-[var(--banana-yellow)]/10'}`}>
+                      <entry.icon className={`w-5 h-5 ${entry.primary ? 'text-[var(--black)]' : 'text-[var(--banana-yellow-dark)]'}`} />
                     </div>
                     <div className="flex-1">
-                      <p className={`font-semibold text-sm ${entry.primary ? 'text-[var(--black)]' : 'text-white'}`}>{entry.title}</p>
-                      <code className={`text-sm ${entry.primary ? 'text-[var(--black)]/70' : 'text-white/60'}`}>{entry.url}</code>
+                      <p className={`font-semibold text-sm ${entry.primary ? 'text-[var(--black)]' : 'text-[var(--text-primary)]'}`}>{entry.title}</p>
+                      <code className={`text-sm ${entry.primary ? 'text-[var(--black)]/70' : 'text-[var(--text-tertiary)]'}`}>{entry.url}</code>
                     </div>
-                    <ArrowRight className={`w-5 h-5 ${entry.primary ? 'text-[var(--black)]' : 'text-white/50'}`} />
+                    <ArrowRight className={`w-5 h-5 ${entry.primary ? 'text-[var(--black)]/70' : 'text-[var(--text-tertiary)]'}`} />
                   </a>
                 ))}
               </div>
-              <p className="mt-5 text-sm text-white/60 text-center">
-                记不住链接也没关系，浏览器直接搜索：<strong className="text-white">地图帮官网</strong>
+              <p className="mt-5 text-sm text-[var(--text-tertiary)] text-center">
+                记不住链接也没关系，浏览器直接搜索：<strong className="text-[var(--text-primary)]">地图帮官网</strong>
               </p>
             </div>
           </div>

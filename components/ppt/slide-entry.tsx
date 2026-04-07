@@ -49,7 +49,7 @@ export function SlideEntry() {
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
           <span className="text-sm font-medium text-[var(--text-tertiary)]">02 / 08</span>
         </div>
-        <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
+        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[var(--text-primary)] to-[var(--banana-yellow-dark)] bg-clip-text text-transparent">
           先找到入口：桌面端怎么下，在线平台怎么进
         </h2>
         <p className="mt-1 text-sm text-[var(--text-secondary)]">记不住地址也没关系，浏览器搜索「地图帮官网」即可找回所有入口</p>
@@ -61,7 +61,7 @@ export function SlideEntry() {
           {entries.map((entry) => (
             <div
               key={entry.number}
-              className={`group relative rounded-2xl border ${entry.borderColor} ${entry.bgColor} p-5 transition-all duration-[var(--transition-base)] hover:shadow-lg hover:-translate-y-1 ${entry.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
+              className={`group relative rounded-2xl border ${entry.borderColor} ${entry.bgColor} p-5 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 ${entry.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50 shadow-[0_4px_12px_rgba(255,215,0,0.3)]' : ''}`}
             >
               {entry.highlight && (
                 <div className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full bg-gradient-to-r from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)] text-xs font-semibold text-[var(--black)]">
