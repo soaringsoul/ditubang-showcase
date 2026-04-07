@@ -8,8 +8,8 @@ export function SlideScenarios() {
       icon: Store,
       number: "一",
       title: "从零数据到一张门店分布图",
-      color: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-50 to-cyan-50",
+      color: "from-[var(--black-80)] to-[var(--text-primary)]",
+      bgGradient: "from-[var(--bg-secondary)] to-[var(--bg-tertiary)]",
       have: "你现在只有一个城市名，或者只知道自己想看某一类门店、竞品或设施分布。",
       process: "先查目标数据，再整理结果，接着直接送进地图制作模块，快速做成一张可查看、可演示、可继续扩展的分布图。",
       results: [
@@ -22,8 +22,8 @@ export function SlideScenarios() {
       icon: FileText,
       number: "二",
       title: "从一张地址表到坐标、地图和分析结果",
-      color: "from-emerald-500 to-teal-500",
-      bgGradient: "from-emerald-50 to-teal-50",
+      color: "from-[var(--black-60)] to-[var(--black-80)]",
+      bgGradient: "from-[var(--bg-tertiary)] to-[var(--bg-secondary)]",
       have: "你拿到的是一张普通 Excel，里面是客户地址、门店地址、样本点地址或者项目点地址。",
       process: "先把地址批量转成经纬度、标准地址和行政区划字段，再继续进入地图制作、区域归属、聚类、覆盖或其他分析流程。",
       results: [
@@ -37,7 +37,7 @@ export function SlideScenarios() {
       number: "三",
       title: "从运营数据直接走到业务判断",
       color: "from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]",
-      bgGradient: "from-[var(--banana-yellow-pale)] to-amber-50",
+      bgGradient: "from-[var(--banana-yellow-pale)] to-[var(--bg-tertiary)]",
       have: "你已经有订单、网点、区域、候选点、服务对象或运营范围等数据，但还缺一个更直观、更稳定的判断方式。",
       process: "把数据送进覆盖、分单、到达圈、选址、商圈分析等业务流程里，让结果直接靠近你真正关心的问题。",
       results: [
@@ -54,7 +54,7 @@ export function SlideScenarios() {
     <div className="relative w-full h-full bg-[var(--bg-primary)] overflow-hidden flex flex-col">
       {/* 背景装饰 */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/2 w-96 h-96 rounded-full bg-gradient-to-b from-[var(--banana-yellow)]/10 to-transparent blur-3xl" />
+        <div className="absolute top-0 left-1/2 w-96 h-96 rounded-full bg-gradient-to-b from-[var(--banana-yellow-light)]/15 to-transparent blur-3xl" />
       </div>
 
       {/* 头部 */}

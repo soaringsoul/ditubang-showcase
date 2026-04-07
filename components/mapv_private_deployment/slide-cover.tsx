@@ -1,16 +1,9 @@
 "use client"
 
-// PPT 封面页组件
-export function SlideCover() {
-  // 地图帮品牌色
-  const brand = {
-    orange: "#F79119",
-    orangeLight: "#FFF4E6",
-    orangePale: "#FFF9F0",
-    cyan: "#49CFF6",
-    cyanLight: "#E8F9FF",
-  }
+import { brand } from "./brand"
 
+// 封面页
+export function SlideCover() {
   return (
     <div className="relative w-full h-full bg-white overflow-hidden flex flex-row">
       {/* 左侧品牌色条 */}
@@ -28,40 +21,37 @@ export function SlideCover() {
           </div>
           <div>
             <span className="text-base font-bold text-gray-900">地图帮</span>
-            <span className="ml-2 text-xs text-gray-400 font-normal">ditubang.com</span>
+            <span className="ml-2 text-xs text-gray-400 font-normal">私有化部署服务</span>
           </div>
         </div>
 
         {/* 中部：主标题区 */}
         <div className="flex-1 flex flex-col justify-center max-w-2xl">
-          {/* 小标签 */}
           <div
             className="inline-flex self-start items-center px-3 py-1 rounded-md text-xs font-semibold mb-6"
             style={{ background: brand.orangeLight, color: brand.orange }}
           >
-            产品介绍 · 桌面端
+            私有化服务通用方案 · V1.2.0
           </div>
 
-          {/* 主标题 */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.1] mb-5">
-            让地理数据分析
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-[1.15] mb-5">
+            内网地图可视化
             <br />
-            像 <span style={{ color: brand.orange }}>Excel</span> 一样简单
+            <span style={{ color: brand.orange }}>私有化部署</span>服务
           </h1>
 
-          {/* 副标题 */}
-          <p className="text-lg text-gray-500 leading-relaxed mb-8 max-w-xl">
-            从地理数据查询到空间分析，从专业制图到在线共享 ——
+          <p className="text-base text-gray-500 leading-relaxed mb-8 max-w-xl">
+            一套可部署、可查询、可展示、可管理的内网地图决策系统。
             <br />
-            40+ 工具覆盖地理数据全流程
+            让 Excel、CSV、数据库中的业务数据，真正转化为可持续使用的地图能力。
           </p>
 
           {/* 三组数据 */}
           <div className="flex items-start gap-8">
             {[
-              { num: "7000+", label: "高校与商业机构" },
-              { num: "40+", label: "专业地理数据工具" },
-              { num: "2", label: "产品形态覆盖全场景" },
+              { num: "5", label: "核心价值" },
+              { num: "10+", label: "地图表达方式" },
+              { num: "3", label: "服务版本可选" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col">
                 <span
@@ -76,11 +66,11 @@ export function SlideCover() {
           </div>
         </div>
 
-        {/* 底部：页码 + 网址 */}
+        {/* 底部 */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-6 h-1 rounded-full" style={{ background: brand.orange }} />
-            <span className="text-xs font-medium text-gray-400">01 / 08</span>
+            <span className="text-xs font-medium text-gray-400">01 / 12</span>
           </div>
           <span className="text-xs text-gray-300">dtbgis.com</span>
         </div>

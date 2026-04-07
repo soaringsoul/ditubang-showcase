@@ -10,8 +10,8 @@ export function SlideFeatures() {
       title: "查地理数据",
       stage: "还没有完整的数据",
       items: ["批量查门店、设施、网点和区域数据", "做地址解析与逆地址解析", "查路线、距离、时间", "获取行政区划或区域边界数据"],
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "bg-blue-50",
+      color: "from-[var(--black-80)] to-[var(--text-primary)]",
+      bgColor: "bg-[var(--bg-secondary)]",
     },
     {
       icon: Map,
@@ -19,8 +19,8 @@ export function SlideFeatures() {
       title: "把表格直接变成地图",
       stage: "已有数据，需要可视化表达",
       items: ["门店分布图", "科研点位图", "离线地图", "多图层叠加展示", "图表与地图组合表达"],
-      color: "from-emerald-500 to-teal-500",
-      bgColor: "bg-emerald-50",
+      color: "from-[var(--black-60)] to-[var(--black-80)]",
+      bgColor: "bg-[var(--bg-tertiary)]",
     },
     {
       icon: Table2,
@@ -28,8 +28,8 @@ export function SlideFeatures() {
       title: "处理普通 Excel / CSV",
       stage: "需要先把表格整理规范",
       items: ["合并多张表", "清洗脏数据", "做透视、统计和图表", "处理批量表格任务"],
-      color: "from-violet-500 to-purple-500",
-      bgColor: "bg-violet-50",
+      color: "from-[var(--banana-yellow-light)] to-[var(--banana-yellow-dark)]",
+      bgColor: "bg-[var(--banana-yellow-pale)]",
       badge: "数据魔方 17 个工具免费使用",
     },
     {
@@ -38,8 +38,8 @@ export function SlideFeatures() {
       title: "处理位置数据",
       stage: "已有坐标、边界、矢量或路网数据",
       items: ["坐标转换", "格式转换", "表格与空间数据关联", "数据合并与整理", "为后续分析做标准化准备"],
-      color: "from-orange-500 to-amber-500",
-      bgColor: "bg-orange-50",
+      color: "from-[var(--black-80)] to-[var(--text-primary)]",
+      bgColor: "bg-[var(--bg-secondary)]",
     },
     {
       icon: BarChart2,
@@ -47,8 +47,8 @@ export function SlideFeatures() {
       title: "做空间分析",
       stage: "不只看图，还需要深入分析判断",
       items: ["缓冲区分析", "空间连接", "点面关系判断", "近邻与聚类分析", "路网处理与 OD 分析"],
-      color: "from-pink-500 to-rose-500",
-      bgColor: "bg-pink-50",
+      color: "from-[var(--black-60)] to-[var(--black-80)]",
+      bgColor: "bg-[var(--bg-tertiary)]",
     },
     {
       icon: Briefcase,
@@ -67,7 +67,7 @@ export function SlideFeatures() {
       {/* 背景装饰 */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gradient-to-bl from-[var(--banana-yellow)]/10 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-gradient-to-tr from-purple-100/30 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-gradient-to-tr from-[var(--banana-yellow-light)]/15 to-transparent blur-3xl" />
       </div>
 
       {/* 头部 */}
@@ -90,8 +90,8 @@ export function SlideFeatures() {
               className={`group relative rounded-xl ${feature.bgColor} border border-[var(--border-secondary)] p-4 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 flex flex-col ${feature.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50 shadow-[0_4px_12px_rgba(255,215,0,0.3)]' : ''}`}
             >
               {feature.badge && (
-                <div className="absolute -top-2.5 left-4 px-2.5 py-0.5 rounded-full bg-[var(--success)] text-xs font-semibold text-white flex items-center gap-1">
-                  <Star className="w-3 h-3" />
+                <div className="absolute -top-2.5 left-4 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)] text-xs font-semibold text-[var(--black)] flex items-center gap-1 shadow-sm">
+                  <Star className="w-3 h-3 text-[var(--black)]/70" />
                   {feature.badge}
                 </div>
               )}

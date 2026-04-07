@@ -27,7 +27,7 @@ export function SlideStart() {
       {/* 背景装饰 */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-gradient-to-bl from-[var(--banana-yellow)]/15 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-to-tr from-emerald-100/30 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-to-tr from-[var(--banana-yellow-light)]/12 to-transparent blur-3xl" />
       </div>
 
       {/* 头部 */}
@@ -77,9 +77,9 @@ export function SlideStart() {
           {/* 右侧：总结与免费体验 */}
           <div className="flex flex-col gap-5">
             {/* 免费体验提示 */}
-            <div className="p-5 rounded-xl bg-emerald-50 border border-emerald-200">
+            <div className="p-5 rounded-xl bg-[var(--banana-yellow-pale)] border border-[var(--banana-yellow)]/30">
               <div className="flex items-center gap-2 mb-3">
-                <CheckCircle className="w-6 h-6 text-[var(--success)]" />
+                <CheckCircle className="w-6 h-6 text-[var(--banana-yellow-dark)]" />
                 <h4 className="font-bold text-base text-[var(--text-primary)]">免费体验</h4>
               </div>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">

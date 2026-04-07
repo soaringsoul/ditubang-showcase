@@ -24,7 +24,7 @@ export function SlideCTA() {
       {/* 背景装饰 */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-gradient-to-bl from-[var(--banana-yellow)]/15 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-to-tr from-emerald-100/30 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-to-tr from-[var(--banana-yellow-light)]/12 to-transparent blur-3xl" />
       </div>
 
       {/* 头部 */}

@@ -3,8 +3,8 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '地图帮桌面端 - 商务手册',
-  description: '把地理数据查询、处理、制图与分析，串成一条真正能落地的工作链路',
+  title: '地图帮产品手册中心',
+  description: '统一查看地图帮产品指南与私有化服务方案',
   generator: 'v0.app',
   icons: {
     icon: [

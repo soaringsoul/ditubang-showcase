@@ -10,9 +10,9 @@ export function SlideEntry() {
       title: "官网首页",
       url: "dtbgis.com",
       description: "适合先整体了解地图帮的产品体系和功能架构，是了解产品全貌的最佳起点。",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "bg-blue-50",
-      borderColor: "border-blue-200",
+      color: "from-[var(--black-80)] to-[var(--text-primary)]",
+      bgColor: "bg-[var(--bg-secondary)]",
+      borderColor: "border-[var(--border-primary)]",
     },
     {
       number: "2",
@@ -31,9 +31,9 @@ export function SlideEntry() {
       title: "在线平台",
       url: "dtbgis.cn",
       description: "适合在线浏览地图成果、下载数据集，以及与团队成员共享和协作。",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200",
+      color: "from-[var(--black-60)] to-[var(--black-80)]",
+      bgColor: "bg-[var(--bg-tertiary)]",
+      borderColor: "border-[var(--border-primary)]",
     },
   ]
 

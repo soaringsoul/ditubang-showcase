@@ -22,7 +22,7 @@ export function SlideProblem() {
     <div className="relative w-full h-full bg-[var(--bg-primary)] overflow-hidden flex flex-col">
       {/* 背景装饰 */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-gradient-to-bl from-red-100/50 to-transparent blur-3xl" />
+        <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-gradient-to-bl from-[var(--banana-yellow-light)]/15 to-transparent blur-3xl" />
         <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-gradient-to-tr from-[var(--banana-yellow)]/10 to-transparent blur-3xl" />
       </div>
 

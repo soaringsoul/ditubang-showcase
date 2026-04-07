@@ -43,7 +43,7 @@ export function SlideContact() {
       {/* 背景装饰 */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-72 h-72 rounded-full bg-gradient-to-bl from-[var(--banana-yellow)]/10 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-gradient-to-tr from-blue-100/20 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-gradient-to-tr from-[var(--banana-yellow-light)]/12 to-transparent blur-3xl" />
       </div>
 
       {/* 头部 */}
@@ -121,8 +121,8 @@ export function SlideContact() {
               </p>
               <div className="space-y-2.5">
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-primary)] border border-[var(--banana-yellow)]/20">
-                  <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center">
-                    <MessageCircle className="w-4 h-4 text-green-600" />
+                  <div className="w-8 h-8 rounded-lg bg-[var(--banana-yellow)]/15 flex items-center justify-center">
+                    <MessageCircle className="w-4 h-4 text-[var(--banana-yellow-dark)]" />
                   </div>
                   <div>
                     <p className="text-[10px] text-[var(--text-tertiary)]">微信（推荐，最快响应）</p>
@@ -131,8 +131,8 @@ export function SlideContact() {
                 </div>
  
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-primary)] border border-[var(--banana-yellow)]/20">
-                  <div className="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center">
-                    <Search className="w-4 h-4 text-rose-500" />
+                  <div className="w-8 h-8 rounded-lg bg-[var(--banana-yellow-light)]/20 flex items-center justify-center">
+                    <Search className="w-4 h-4 text-[var(--banana-yellow-dark)]" />
                   </div>
                   <div>
                     <p className="text-[10px] text-[var(--text-tertiary)]">小红书（搜索「地图帮」后私信）</p>
@@ -141,8 +141,8 @@ export function SlideContact() {
                 </div>
 
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-primary)] border border-[var(--banana-yellow)]/20">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                    <Mail className="w-4 h-4 text-purple-600" />
+                  <div className="w-8 h-8 rounded-lg bg-[var(--banana-yellow)]/10 flex items-center justify-center">
+                    <Mail className="w-4 h-4 text-[var(--banana-yellow-dark)]" />
                   </div>
                   <div>
                     <p className="text-[10px] text-[var(--text-tertiary)]">邮箱</p>
