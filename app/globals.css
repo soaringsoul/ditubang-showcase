@@ -286,15 +286,52 @@
     print-color-adjust: exact !important;
   }
   
-  /* 确保模糊效果在打印时简化 */
-  .print-slide [class*="blur-"] {
-    filter: none !important;
-    opacity: 0.3 !important;
+  /* 隐藏背景装饰模糊元素 - 打印时不需要 */
+  .print-slide [class*="blur-3xl"],
+  .print-slide [class*="blur-2xl"] {
+    display: none !important;
   }
   
   /* 渐变文字 */
   .print-slide [class*="bg-clip-text"] {
     -webkit-background-clip: text !important;
     background-clip: text !important;
+  }
+  
+  /* ===== 打印排版密度增强 ===== */
+  
+  /* 强制多列网格 - 避免响应式回退到单列 */
+  .print-slide .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .print-slide .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .print-slide .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  
+  /* 隐藏 hover/transition 类的动画残留 */
+  .print-slide [class*="transition-"],
+  .print-slide [class*="hover:"] {
+    transition: none !important;
+  }
+  
+  /* 确保深色块正确打印 */
+  .print-slide .bg-\[var\(--black\)\] {
+    background-color: #1A1A1A !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* 确保渐变背景正确打印 */
+  .print-slide .bg-red-50\/80,
+  .print-slide .bg-emerald-50,
+  .print-slide .bg-blue-50,
+  .print-slide .bg-violet-50,
+  .print-slide .bg-orange-50,
+  .print-slide .bg-pink-50 {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }

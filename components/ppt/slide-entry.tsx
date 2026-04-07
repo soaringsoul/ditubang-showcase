@@ -44,31 +44,31 @@ export function SlideEntry() {
       <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-gradient-to-tr from-[var(--black-10)] to-transparent blur-3xl" />
 
       {/* 头部 */}
-      <div className="relative px-8 md:px-12 pt-8 pb-4">
+      <div className="relative px-6 md:px-10 pt-5 pb-2">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-1.5 h-8 rounded-full bg-gradient-to-b from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)]" />
-          <span className="text-sm font-medium text-[var(--text-tertiary)]">02 / 06</span>
+          <span className="text-sm font-medium text-[var(--text-tertiary)]">02 / 07</span>
         </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">
+        <h2 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
           先找到入口：桌面端怎么下，在线平台怎么进
         </h2>
-        <p className="mt-2 text-[var(--text-secondary)]">第一次接触地图帮，先记住这 3 个入口</p>
+        <p className="mt-1 text-sm text-[var(--text-secondary)]">第一次接触地图帮，先记住这 3 个入口</p>
       </div>
 
       {/* 主内容 */}
-      <div className="relative flex-1 px-8 md:px-12 py-4 overflow-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="relative flex-1 px-6 md:px-10 py-2 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {entries.map((entry) => (
             <div
               key={entry.number}
-              className={`group relative rounded-2xl border ${entry.borderColor} ${entry.bgColor} p-5 transition-all duration-[var(--transition-base)] hover:shadow-lg hover:-translate-y-1 ${entry.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
+              className={`group relative rounded-2xl border ${entry.borderColor} ${entry.bgColor} p-4 transition-all duration-[var(--transition-base)] hover:shadow-lg hover:-translate-y-1 ${entry.highlight ? 'ring-2 ring-[var(--banana-yellow)]/50' : ''}`}
             >
               {entry.highlight && (
                 <div className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full bg-gradient-to-r from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)] text-xs font-semibold text-[var(--black)]">
                   推荐
                 </div>
               )}
-              <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${entry.color} flex items-center justify-center mb-4 shadow-md`}>
+              <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${entry.color} flex items-center justify-center mb-3 shadow-md`}>
                 <entry.icon className="w-5 h-5 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">{entry.title}</h3>
@@ -81,10 +81,10 @@ export function SlideEntry() {
         </div>
 
         {/* 判断原则 */}
-        <div className="mt-6 p-5 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-primary)]">
-          <div className="flex items-center gap-2 mb-4">
-            <Lightbulb className="w-5 h-5 text-[var(--banana-yellow-dark)]" />
-            <h3 className="font-bold text-[var(--text-primary)]">不知道先用哪个，就按这个原则判断</h3>
+        <div className="mt-4 p-4 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-primary)]">
+          <div className="flex items-center gap-2 mb-3">
+            <Lightbulb className="w-4 h-4 text-[var(--banana-yellow-dark)]" />
+            <h3 className="font-bold text-sm text-[var(--text-primary)]">不知道先用哪个，就按这个原则判断</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
@@ -102,10 +102,10 @@ export function SlideEntry() {
         </div>
 
         {/* 提示 */}
-        <div className="mt-4 p-4 rounded-xl bg-gradient-to-r from-[var(--banana-yellow-pale)] to-transparent border-l-4 border-[var(--banana-yellow)]">
-          <p className="text-sm text-[var(--text-secondary)]">
+        <div className="mt-3 p-3 rounded-xl bg-gradient-to-r from-[var(--banana-yellow-pale)] to-transparent border-l-4 border-[var(--banana-yellow)]">
+          <p className="text-xs text-[var(--text-secondary)]">
             <strong className="text-[var(--text-primary)]">温馨提示：</strong>
-            初次使用地图帮时，建议先明确自己的核心需求，再选择对应的入口开始使用。
+            建议先明确核心需求，再选择对应入口开始使用。
           </p>
         </div>
       </div>

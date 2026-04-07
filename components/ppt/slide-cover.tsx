@@ -25,7 +25,7 @@ export function SlideCover() {
       {/* 主内容区 */}
       <div className="relative flex-1 flex flex-col items-center justify-center px-8 md:px-16">
         {/* Logo 标识 */}
-        <div className="mb-8 flex items-center gap-3">
+        <div className="mb-5 flex items-center gap-3">
           <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--banana-yellow)] to-[var(--banana-yellow-dark)] flex items-center justify-center shadow-lg shadow-[var(--banana-yellow)]/30">
             <MapPin className="w-6 h-6 text-[var(--black)]" />
           </div>
@@ -33,21 +33,21 @@ export function SlideCover() {
         </div>
 
         {/* 主标题 */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-center text-[var(--text-primary)] mb-6 tracking-tight">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-center text-[var(--text-primary)] mb-4 tracking-tight">
           <span className="inline-block bg-gradient-to-r from-[#ca8a04] via-[#f97316] to-[#ec4899] bg-clip-text text-transparent bg-[length:200%] animate-gradient">
             地图帮桌面端
           </span>
         </h1>
 
         {/* 副标题 */}
-        <p className="text-lg md:text-xl lg:text-2xl text-[var(--text-secondary)] text-center max-w-3xl mb-12 leading-relaxed font-medium">
+        <p className="text-base md:text-lg lg:text-xl text-[var(--text-secondary)] text-center max-w-3xl mb-8 leading-relaxed font-medium">
           把地理数据查询、处理、制图与分析，
           <br className="hidden md:block" />
           串成一条真正能落地的工作链路
         </p>
 
         {/* 特性标签 */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
           {[
             { icon: Database, text: "本地处理更安心" },
             { icon: Layers, text: "表格到地图更直接" },
@@ -79,7 +79,7 @@ export function SlideCover() {
       <div className="relative py-6 flex items-center justify-center">
         <div className="flex items-center gap-2">
           <div className="w-8 h-1 rounded-full bg-[var(--banana-yellow)]" />
-          <span className="text-xs font-medium text-[var(--text-tertiary)]">01 / 06</span>
+          <span className="text-xs font-medium text-[var(--text-tertiary)]">01 / 07</span>
         </div>
       </div>
 

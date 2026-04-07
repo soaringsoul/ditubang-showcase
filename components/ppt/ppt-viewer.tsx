@@ -8,6 +8,7 @@ import { SlideProblem } from "./slide-problem"
 import { SlideFeatures } from "./slide-features"
 import { SlideScenarios } from "./slide-scenarios"
 import { SlideCTA } from "./slide-cta"
+import { SlideStart } from "./slide-start"
 
 const slides = [
   { id: 1, title: "封面", component: SlideCover },
@@ -15,7 +16,8 @@ const slides = [
   { id: 3, title: "痛点分析", component: SlideProblem },
   { id: 4, title: "六类任务", component: SlideFeatures },
   { id: 5, title: "工作场景", component: SlideScenarios },
-  { id: 6, title: "开始使用", component: SlideCTA },
+  { id: 6, title: "适合谁用", component: SlideCTA },
+  { id: 7, title: "开始使用", component: SlideStart },
 ]
 
 export function PPTViewer() {
@@ -53,9 +55,13 @@ export function PPTViewer() {
     }
   }, [])
 
-  // 导出PDF功能 - 直接调用浏览器打印
+  // 导出PDF功能 - 调用浏览器打印
   const exportToPDF = useCallback(() => {
-    window.print()
+    document.body.classList.add('printing')
+    requestAnimationFrame(() => {
+      window.print()
+      document.body.classList.remove('printing')
+    })
   }, [])
 
   // 键盘导航
