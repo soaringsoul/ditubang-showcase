@@ -146,7 +146,7 @@ export function SlideContact() {
                   </div>
                   <div>
                     <p className="text-[10px] text-[var(--text-tertiary)]">邮箱</p>
-                    <p className="text-sm font-bold text-[var(--text-primary)]">951683309@qq.com</p>
+                    <p className="text-sm font-bold text-[var(--text-primary)]">ditubang@yeah.net</p>
                   </div>
                 </div>
               </div>
